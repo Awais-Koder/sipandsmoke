@@ -1,0 +1,803 @@
+[
+  {
+    "image_path": "assets/images/gallery/photo-01.webp",
+    "alt_text": "Stone-baked pizza at Sip & Smoke, Auburn",
+    "caption": "Stone-baked pizza \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 1
+  },
+  {
+    "image_path": "assets/images/gallery/photo-07.webp",
+    "alt_text": "Wok-tossed noodles at Sip & Smoke, Auburn",
+    "caption": "Wok-tossed noodles \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 2
+  },
+  {
+    "image_path": "assets/images/gallery/photo-11.webp",
+    "alt_text": "Glazed wings at Sip & Smoke, Auburn",
+    "caption": "Glazed wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 3
+  },
+  {
+    "image_path": "assets/images/gallery/photo-18.webp",
+    "alt_text": "House fried rice at Sip & Smoke, Auburn",
+    "caption": "House fried rice \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 4
+  },
+  {
+    "image_path": "assets/images/gallery/photo-22.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 5
+  },
+  {
+    "image_path": "assets/images/gallery/photo-32.webp",
+    "alt_text": "Loaded wraps at Sip & Smoke, Auburn",
+    "caption": "Loaded wraps \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 6
+  },
+  {
+    "image_path": "assets/images/gallery/photo-39.webp",
+    "alt_text": "The full spread at Sip & Smoke, Auburn",
+    "caption": "The full spread \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 7
+  },
+  {
+    "image_path": "assets/images/gallery/photo-41.webp",
+    "alt_text": "Mango shake at Sip & Smoke, Auburn",
+    "caption": "Mango shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 8
+  },
+  {
+    "image_path": "assets/images/gallery/photo-44.webp",
+    "alt_text": "Toasted clubs at Sip & Smoke, Auburn",
+    "caption": "Toasted clubs \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 9
+  },
+  {
+    "image_path": "assets/images/gallery/photo-47.webp",
+    "alt_text": "Chocolate shake at Sip & Smoke, Auburn",
+    "caption": "Chocolate shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 10
+  },
+  {
+    "image_path": "assets/images/gallery/photo-49.webp",
+    "alt_text": "House burger at Sip & Smoke, Auburn",
+    "caption": "House burger \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 11
+  },
+  {
+    "image_path": "assets/images/gallery/photo-54.webp",
+    "alt_text": "Cookies & cream shake at Sip & Smoke, Auburn",
+    "caption": "Cookies & cream shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 12
+  },
+  {
+    "image_path": "assets/images/gallery/photo-57.webp",
+    "alt_text": "Layered fruit at Sip & Smoke, Auburn",
+    "caption": "Layered fruit \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 13
+  },
+  {
+    "image_path": "assets/images/gallery/photo-60.webp",
+    "alt_text": "Creamy pasta at Sip & Smoke, Auburn",
+    "caption": "Creamy pasta \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 14
+  },
+  {
+    "image_path": "assets/images/gallery/photo-62.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 15
+  },
+  {
+    "image_path": "assets/images/gallery/photo-70.webp",
+    "alt_text": "Chicken alfredo at Sip & Smoke, Auburn",
+    "caption": "Chicken alfredo \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 16
+  },
+  {
+    "image_path": "assets/images/gallery/photo-73.webp",
+    "alt_text": "Fruit & gelato at Sip & Smoke, Auburn",
+    "caption": "Fruit & gelato \u00b7 Desserts",
+    "category": "Desserts",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 17
+  },
+  {
+    "image_path": "assets/images/gallery/photo-74.webp",
+    "alt_text": "Pistachio Ashtuta at Sip & Smoke, Auburn",
+    "caption": "Pistachio Ashtuta \u00b7 Desserts",
+    "category": "Desserts",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 18
+  },
+  {
+    "image_path": "assets/images/gallery/photo-77.webp",
+    "alt_text": "Churros at Sip & Smoke, Auburn",
+    "caption": "Churros \u00b7 Desserts",
+    "category": "Desserts",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 19
+  },
+  {
+    "image_path": "assets/images/gallery/photo-79.webp",
+    "alt_text": "Shisha lounge at Sip & Smoke, Auburn",
+    "caption": "Shisha lounge \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 20
+  },
+  {
+    "image_path": "assets/images/gallery/photo-85.webp",
+    "alt_text": "Neon nights at Sip & Smoke, Auburn",
+    "caption": "Neon nights \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 21
+  },
+  {
+    "image_path": "assets/images/gallery/photo-88.webp",
+    "alt_text": "The sign at Sip & Smoke, Auburn",
+    "caption": "The sign \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 22
+  },
+  {
+    "image_path": "assets/images/gallery/photo-02.webp",
+    "alt_text": "Stone-baked pizza at Sip & Smoke, Auburn",
+    "caption": "Stone-baked pizza \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 23
+  },
+  {
+    "image_path": "assets/images/gallery/photo-08.webp",
+    "alt_text": "Wok-tossed noodles at Sip & Smoke, Auburn",
+    "caption": "Wok-tossed noodles \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 24
+  },
+  {
+    "image_path": "assets/images/gallery/photo-12.webp",
+    "alt_text": "Glazed wings at Sip & Smoke, Auburn",
+    "caption": "Glazed wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 25
+  },
+  {
+    "image_path": "assets/images/gallery/photo-19.webp",
+    "alt_text": "House fried rice at Sip & Smoke, Auburn",
+    "caption": "House fried rice \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 26
+  },
+  {
+    "image_path": "assets/images/gallery/photo-23.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 27
+  },
+  {
+    "image_path": "assets/images/gallery/photo-33.webp",
+    "alt_text": "Loaded wraps at Sip & Smoke, Auburn",
+    "caption": "Loaded wraps \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 28
+  },
+  {
+    "image_path": "assets/images/gallery/photo-40.webp",
+    "alt_text": "The full spread at Sip & Smoke, Auburn",
+    "caption": "The full spread \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 1000,
+    "height": 667,
+    "sort_order": 29
+  },
+  {
+    "image_path": "assets/images/gallery/photo-42.webp",
+    "alt_text": "Mango shake at Sip & Smoke, Auburn",
+    "caption": "Mango shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 30
+  },
+  {
+    "image_path": "assets/images/gallery/photo-45.webp",
+    "alt_text": "Toasted clubs at Sip & Smoke, Auburn",
+    "caption": "Toasted clubs \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 31
+  },
+  {
+    "image_path": "assets/images/gallery/photo-48.webp",
+    "alt_text": "Chocolate shake at Sip & Smoke, Auburn",
+    "caption": "Chocolate shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 32
+  },
+  {
+    "image_path": "assets/images/gallery/photo-50.webp",
+    "alt_text": "House burger at Sip & Smoke, Auburn",
+    "caption": "House burger \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 33
+  },
+  {
+    "image_path": "assets/images/gallery/photo-55.webp",
+    "alt_text": "Cookies & cream shake at Sip & Smoke, Auburn",
+    "caption": "Cookies & cream shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 34
+  },
+  {
+    "image_path": "assets/images/gallery/photo-58.webp",
+    "alt_text": "Layered fruit at Sip & Smoke, Auburn",
+    "caption": "Layered fruit \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 35
+  },
+  {
+    "image_path": "assets/images/gallery/photo-61.webp",
+    "alt_text": "Creamy pasta at Sip & Smoke, Auburn",
+    "caption": "Creamy pasta \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 36
+  },
+  {
+    "image_path": "assets/images/gallery/photo-63.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 37
+  },
+  {
+    "image_path": "assets/images/gallery/photo-71.webp",
+    "alt_text": "Chicken alfredo at Sip & Smoke, Auburn",
+    "caption": "Chicken alfredo \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 38
+  },
+  {
+    "image_path": "assets/images/gallery/photo-75.webp",
+    "alt_text": "Pistachio Ashtuta at Sip & Smoke, Auburn",
+    "caption": "Pistachio Ashtuta \u00b7 Desserts",
+    "category": "Desserts",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 39
+  },
+  {
+    "image_path": "assets/images/gallery/photo-78.webp",
+    "alt_text": "Churros at Sip & Smoke, Auburn",
+    "caption": "Churros \u00b7 Desserts",
+    "category": "Desserts",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 40
+  },
+  {
+    "image_path": "assets/images/gallery/photo-80.webp",
+    "alt_text": "Shisha lounge at Sip & Smoke, Auburn",
+    "caption": "Shisha lounge \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 41
+  },
+  {
+    "image_path": "assets/images/gallery/photo-86.webp",
+    "alt_text": "Neon nights at Sip & Smoke, Auburn",
+    "caption": "Neon nights \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 42
+  },
+  {
+    "image_path": "assets/images/gallery/photo-89.webp",
+    "alt_text": "The sign at Sip & Smoke, Auburn",
+    "caption": "The sign \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 43
+  },
+  {
+    "image_path": "assets/images/gallery/photo-03.webp",
+    "alt_text": "Stone-baked pizza at Sip & Smoke, Auburn",
+    "caption": "Stone-baked pizza \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 44
+  },
+  {
+    "image_path": "assets/images/gallery/photo-09.webp",
+    "alt_text": "Wok-tossed noodles at Sip & Smoke, Auburn",
+    "caption": "Wok-tossed noodles \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 45
+  },
+  {
+    "image_path": "assets/images/gallery/photo-13.webp",
+    "alt_text": "Glazed wings at Sip & Smoke, Auburn",
+    "caption": "Glazed wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 46
+  },
+  {
+    "image_path": "assets/images/gallery/photo-20.webp",
+    "alt_text": "House fried rice at Sip & Smoke, Auburn",
+    "caption": "House fried rice \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 47
+  },
+  {
+    "image_path": "assets/images/gallery/photo-24.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 48
+  },
+  {
+    "image_path": "assets/images/gallery/photo-34.webp",
+    "alt_text": "Loaded wraps at Sip & Smoke, Auburn",
+    "caption": "Loaded wraps \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 49
+  },
+  {
+    "image_path": "assets/images/gallery/photo-43.webp",
+    "alt_text": "Mango shake at Sip & Smoke, Auburn",
+    "caption": "Mango shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 50
+  },
+  {
+    "image_path": "assets/images/gallery/photo-46.webp",
+    "alt_text": "Toasted clubs at Sip & Smoke, Auburn",
+    "caption": "Toasted clubs \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 51
+  },
+  {
+    "image_path": "assets/images/gallery/photo-51.webp",
+    "alt_text": "House burger at Sip & Smoke, Auburn",
+    "caption": "House burger \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 52
+  },
+  {
+    "image_path": "assets/images/gallery/photo-56.webp",
+    "alt_text": "Cookies & cream shake at Sip & Smoke, Auburn",
+    "caption": "Cookies & cream shake \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 53
+  },
+  {
+    "image_path": "assets/images/gallery/photo-59.webp",
+    "alt_text": "Layered fruit at Sip & Smoke, Auburn",
+    "caption": "Layered fruit \u00b7 Shakes",
+    "category": "Shakes",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 54
+  },
+  {
+    "image_path": "assets/images/gallery/photo-64.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 55
+  },
+  {
+    "image_path": "assets/images/gallery/photo-72.webp",
+    "alt_text": "Chicken alfredo at Sip & Smoke, Auburn",
+    "caption": "Chicken alfredo \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 56
+  },
+  {
+    "image_path": "assets/images/gallery/photo-76.webp",
+    "alt_text": "Pistachio Ashtuta at Sip & Smoke, Auburn",
+    "caption": "Pistachio Ashtuta \u00b7 Desserts",
+    "category": "Desserts",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 57
+  },
+  {
+    "image_path": "assets/images/gallery/photo-81.webp",
+    "alt_text": "Shisha lounge at Sip & Smoke, Auburn",
+    "caption": "Shisha lounge \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 58
+  },
+  {
+    "image_path": "assets/images/gallery/photo-87.webp",
+    "alt_text": "Neon nights at Sip & Smoke, Auburn",
+    "caption": "Neon nights \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 59
+  },
+  {
+    "image_path": "assets/images/gallery/photo-04.webp",
+    "alt_text": "Stone-baked pizza at Sip & Smoke, Auburn",
+    "caption": "Stone-baked pizza \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 60
+  },
+  {
+    "image_path": "assets/images/gallery/photo-10.webp",
+    "alt_text": "Wok-tossed noodles at Sip & Smoke, Auburn",
+    "caption": "Wok-tossed noodles \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 61
+  },
+  {
+    "image_path": "assets/images/gallery/photo-14.webp",
+    "alt_text": "Glazed wings at Sip & Smoke, Auburn",
+    "caption": "Glazed wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 62
+  },
+  {
+    "image_path": "assets/images/gallery/photo-21.webp",
+    "alt_text": "House fried rice at Sip & Smoke, Auburn",
+    "caption": "House fried rice \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 63
+  },
+  {
+    "image_path": "assets/images/gallery/photo-25.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 64
+  },
+  {
+    "image_path": "assets/images/gallery/photo-35.webp",
+    "alt_text": "Loaded wraps at Sip & Smoke, Auburn",
+    "caption": "Loaded wraps \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 65
+  },
+  {
+    "image_path": "assets/images/gallery/photo-52.webp",
+    "alt_text": "House burger at Sip & Smoke, Auburn",
+    "caption": "House burger \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 66
+  },
+  {
+    "image_path": "assets/images/gallery/photo-65.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 67
+  },
+  {
+    "image_path": "assets/images/gallery/photo-82.webp",
+    "alt_text": "Shisha lounge at Sip & Smoke, Auburn",
+    "caption": "Shisha lounge \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 68
+  },
+  {
+    "image_path": "assets/images/gallery/photo-05.webp",
+    "alt_text": "Stone-baked pizza at Sip & Smoke, Auburn",
+    "caption": "Stone-baked pizza \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 69
+  },
+  {
+    "image_path": "assets/images/gallery/photo-15.webp",
+    "alt_text": "Glazed wings at Sip & Smoke, Auburn",
+    "caption": "Glazed wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 70
+  },
+  {
+    "image_path": "assets/images/gallery/photo-26.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 71
+  },
+  {
+    "image_path": "assets/images/gallery/photo-36.webp",
+    "alt_text": "Loaded wraps at Sip & Smoke, Auburn",
+    "caption": "Loaded wraps \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 72
+  },
+  {
+    "image_path": "assets/images/gallery/photo-53.webp",
+    "alt_text": "House burger at Sip & Smoke, Auburn",
+    "caption": "House burger \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 73
+  },
+  {
+    "image_path": "assets/images/gallery/photo-66.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 74
+  },
+  {
+    "image_path": "assets/images/gallery/photo-83.webp",
+    "alt_text": "Shisha lounge at Sip & Smoke, Auburn",
+    "caption": "Shisha lounge \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 75
+  },
+  {
+    "image_path": "assets/images/gallery/photo-06.webp",
+    "alt_text": "Stone-baked pizza at Sip & Smoke, Auburn",
+    "caption": "Stone-baked pizza \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 76
+  },
+  {
+    "image_path": "assets/images/gallery/photo-16.webp",
+    "alt_text": "Glazed wings at Sip & Smoke, Auburn",
+    "caption": "Glazed wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 77
+  },
+  {
+    "image_path": "assets/images/gallery/photo-27.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 78
+  },
+  {
+    "image_path": "assets/images/gallery/photo-37.webp",
+    "alt_text": "Loaded wraps at Sip & Smoke, Auburn",
+    "caption": "Loaded wraps \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 79
+  },
+  {
+    "image_path": "assets/images/gallery/photo-67.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 80
+  },
+  {
+    "image_path": "assets/images/gallery/photo-84.webp",
+    "alt_text": "Shisha lounge at Sip & Smoke, Auburn",
+    "caption": "Shisha lounge \u00b7 Lounge",
+    "category": "Lounge",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 81
+  },
+  {
+    "image_path": "assets/images/gallery/photo-17.webp",
+    "alt_text": "Glazed wings at Sip & Smoke, Auburn",
+    "caption": "Glazed wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 82
+  },
+  {
+    "image_path": "assets/images/gallery/photo-28.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 83
+  },
+  {
+    "image_path": "assets/images/gallery/photo-38.webp",
+    "alt_text": "Loaded wraps at Sip & Smoke, Auburn",
+    "caption": "Loaded wraps \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 84
+  },
+  {
+    "image_path": "assets/images/gallery/photo-68.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 85
+  },
+  {
+    "image_path": "assets/images/gallery/photo-29.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 86
+  },
+  {
+    "image_path": "assets/images/gallery/photo-69.webp",
+    "alt_text": "Mixed grill at Sip & Smoke, Auburn",
+    "caption": "Mixed grill \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 87
+  },
+  {
+    "image_path": "assets/images/gallery/photo-30.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 88
+  },
+  {
+    "image_path": "assets/images/gallery/photo-31.webp",
+    "alt_text": "Sticky wings at Sip & Smoke, Auburn",
+    "caption": "Sticky wings \u00b7 Kitchen",
+    "category": "Kitchen",
+    "width": 667,
+    "height": 1000,
+    "sort_order": 89
+  }
+]

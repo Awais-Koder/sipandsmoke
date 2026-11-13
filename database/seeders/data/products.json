@@ -1,0 +1,123 @@
+[
+  {
+    "category": "juice",
+    "kind": "Arabian cocktail",
+    "name": "Avocado Dream",
+    "description": "Creamy avocado, milk and a little sweetness. Rich, cold and refreshing.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/avocado-dream.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 1
+  },
+  {
+    "category": "juice",
+    "kind": "Arabian cocktail",
+    "name": "King Royal Mango",
+    "description": "Ripe mango blended with milk and ice for a royal, sunny sip.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/king-royal-mango.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 2
+  },
+  {
+    "category": "juice",
+    "kind": "Arabian cocktail",
+    "name": "Tropical",
+    "description": "Pineapple, banana and mango with a bright tropical finish.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/tropical.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 3
+  },
+  {
+    "category": "juice",
+    "kind": "Fresh fusion",
+    "name": "Mango King",
+    "description": "Mango and ice, blended thick and served cold.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/mango-king.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 4
+  },
+  {
+    "category": "shakes",
+    "kind": "Shake",
+    "name": "Dry Fruit Shake",
+    "description": "A creamy shake with mixed dry fruit and a nutty finish.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/dry-fruit-shake.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 5
+  },
+  {
+    "category": "shakes",
+    "kind": "Shake",
+    "name": "Ferrero Shake",
+    "description": "Chocolate and hazelnut blended with ice cream and topped with cream.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/ferrero-shake.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 6
+  },
+  {
+    "category": "shakes",
+    "kind": "Shake",
+    "name": "Nutella Shake",
+    "description": "Chocolate hazelnut, milk and cream. A rich one.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/nutella-shake.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 7
+  },
+  {
+    "category": "shakes",
+    "kind": "Shake",
+    "name": "Oreo Shake",
+    "description": "Cookies and cream with crushed Oreo and a whipped top.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/oreo-shake.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 8
+  },
+  {
+    "category": "shakes",
+    "kind": "Shake",
+    "name": "KitKat Shake",
+    "description": "Chocolate wafer shake with a creamy finish.",
+    "sizes": "S \u00b7 M \u00b7 L \u00b7 XL",
+    "image_path": "assets/images/products/kitkat-shake.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 9
+  },
+  {
+    "category": "desserts",
+    "kind": "Ashtuta",
+    "name": "Ashtuta Pistachio",
+    "description": "Creamy pistachio ashtuta with pistachio sauce and crumbs.",
+    "sizes": "Single serve",
+    "image_path": "assets/images/products/ashtuta-pistachio.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 10
+  },
+  {
+    "category": "desserts",
+    "kind": "Ashtuta",
+    "name": "Ashtuta Dubai",
+    "description": "Pistachio, Nutella and pistachio crumbs, layered into a warm dessert.",
+    "sizes": "Single serve",
+    "image_path": "assets/images/products/ashtuta-dubai.webp",
+    "width": 1000,
+    "height": 1250,
+    "sort_order": 11
+  }
+]

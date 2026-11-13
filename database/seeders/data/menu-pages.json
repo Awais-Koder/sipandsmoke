@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Burgers",
+    "alt_text": "Sip & Smoke burgers menu",
+    "image_path": "assets/images/menu/burgers.webp",
+    "sort_order": 1
+  },
+  {
+    "title": "Wraps",
+    "alt_text": "Sip & Smoke wraps menu",
+    "image_path": "assets/images/menu/wraps.webp",
+    "sort_order": 2
+  },
+  {
+    "title": "Pasta",
+    "alt_text": "Sip & Smoke pasta menu",
+    "image_path": "assets/images/menu/pasta.webp",
+    "sort_order": 3
+  },
+  {
+    "title": "Indo-Chinese",
+    "alt_text": "Sip & Smoke Indo-Chinese menu",
+    "image_path": "assets/images/menu/indo-chinese.webp",
+    "sort_order": 4
+  },
+  {
+    "title": "Tenders & wings",
+    "alt_text": "Sip & Smoke tenders and wings menu",
+    "image_path": "assets/images/menu/tenders-wings.webp",
+    "sort_order": 5
+  },
+  {
+    "title": "Pizzas",
+    "alt_text": "Sip & Smoke pizzas menu",
+    "image_path": "assets/images/menu/pizzas.webp",
+    "sort_order": 6
+  },
+  {
+    "title": "Fries",
+    "alt_text": "Sip & Smoke fries menu",
+    "image_path": "assets/images/menu/fries.webp",
+    "sort_order": 7
+  },
+  {
+    "title": "Mains",
+    "alt_text": "Sip & Smoke mains menu",
+    "image_path": "assets/images/menu/mains.webp",
+    "sort_order": 8
+  },
+  {
+    "title": "Sandwiches",
+    "alt_text": "Sip & Smoke sandwiches menu",
+    "image_path": "assets/images/menu/sandwiches.webp",
+    "sort_order": 9
+  }
+]
