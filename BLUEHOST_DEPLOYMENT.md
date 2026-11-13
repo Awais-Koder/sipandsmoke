@@ -11,10 +11,12 @@ Laravel app served from `public/`.
 
 ## Quick start — 12 steps
 
-You only need **cPanel**, the project ZIP, and the database details you create in step 2.
+You only need **cPanel**, the project ZIP, and a database choice (step 2: SQLite or MySQL).
 
-1. **Set PHP 8.2 or 8.3** in cPanel → *Select PHP Version*. Enable `pdo_mysql`, `mbstring`, `openssl`, `fileinfo`, `gd` (with WebP), `zip`, `curl`, `xml`, `bcmath` and `exif`.
-2. **Create the database** in cPanel → *MySQL Databases*. Create a database and user, then give the user **All Privileges**. Note the full database name, username and password.
+1. **Set PHP 8.2 or newer** in cPanel → *Select PHP Version* (8.3/8.4 recommended; this project runs on 8.4). Enable `pdo_sqlite` and/or `pdo_mysql`, plus `mbstring`, `openssl`, `fileinfo`, `gd` (with WebP), `zip`, `curl`, `xml`, `bcmath` and `exif`.
+2. **Choose the database**:
+   - **SQLite (default, used by this project):** no database server or cPanel database is needed. The app creates `database/database.sqlite`; just make the `database/` directory writable.
+   - **MySQL:** cPanel → *MySQL Databases*. Create a database and user, then give the user **All Privileges**. Note the full database name, username and password.
 3. **Build the ZIP on your computer** from the project folder:
    ```bash
    composer install --no-dev --optimize-autoloader
@@ -30,10 +32,16 @@ You only need **cPanel**, the project ZIP, and the database details you create i
    php artisan key:generate --force
    ```
    Save the generated `APP_KEY` somewhere safe. Never regenerate it after 2FA is set up.
-8. **Create the tables and first admin**:
+8. **Create the tables and first admin (seed)**:
    ```bash
-   php artisan migrate --force --seed
+   # SQLite only, once:
+   touch database/database.sqlite
+
+   php artisan migrate --force
+   php artisan db:seed --force
+   # or in one command: php artisan migrate --force --seed
    ```
+   See section 6.1 for seeding details and safe re-seeding rules.
 9. **Finish the first deploy**:
    ```bash
    php artisan optimize
@@ -41,7 +49,7 @@ You only need **cPanel**, the project ZIP, and the database details you create i
    ```
 10. **Open the site and admin login**: visit `https://yourdomain.com` and `https://yourdomain.com/admin/login`. Sign in with the `ADMIN_EMAIL` and `ADMIN_PASSWORD` from `.env`, then scan the 2FA QR code and confirm the 6-digit code.
 11. **Change the admin email/password from the panel**: go to **Admin → Account**. Enter the current password, set the new email and password, then save. Next sign-in uses the new details.
-12. **Back up** the database, `.env` (especially `APP_KEY`) and `public/uploads/` before making future changes.
+12. **Back up** the database (SQLite file or MySQL dump), `.env` (especially `APP_KEY`) and `public/uploads/` before making future changes.
 
 > No SSH or Terminal on your plan? Use the one-time Cron Job method in section 8.
 
@@ -83,15 +91,23 @@ Target layout:
 /home/USERNAME/sipandsmoke/public  ← web document root
 ```
 
-Use a real MySQL database. Do **not** use SQLite in production.
-Set the PHP version to **8.2 or 8.3**.
+Both SQLite and MySQL/MariaDB are supported in production. This project is
+currently deployed with SQLite because the site has one admin panel and modest
+write traffic. Choose MySQL if the host prefers a managed database, if several
+app servers need to share data, or if the site will have heavy concurrent writes.
+
+SQLite has no separate credentials and is fast for this workload, but the
+`database/` directory must be writable by PHP and the database file must be
+included in backups. Do not put SQLite on a network share.
+
+Set the PHP version to **8.2 or newer** (8.4 is used in production).
 
 ### Bluehost requirements
 
 Enable or confirm these in **cPanel → Select PHP Version → Extensions**:
 
 - `gd` with WebP support
-- `pdo_mysql`, `mysqli`
+- `pdo_sqlite` for SQLite, or `pdo_mysql` + `mysqli` for MySQL
 - `mbstring`, `xml`, `curl`, `zip`, `openssl`, `fileinfo`
 - `tokenizer`, `ctype`, `json`, `bcmath`, `exif`
 
@@ -143,12 +159,13 @@ or use the SSH route in section 4B.
 
 ## 4A. Deploy with cPanel File Manager (no SSH)
 
-1. **Create the database**
-   - cPanel → **MySQL Databases**
-   - Create database: `USERNAME_sipandsmoke`
-   - Create user and a strong password
-   - Add the user to the database with **All Privileges**
-   - Write down the full database name, username and password.
+1. **Choose the database**
+   - **SQLite:** create an empty file at
+     `/home/USERNAME/sipandsmoke/database/database.sqlite` and make the
+     `database/` folder writable (`775`). No cPanel database is required.
+   - **MySQL:** cPanel → **MySQL Databases**; create database
+     `USERNAME_sipandsmoke`, create a user with a strong password, add the user
+     with **All Privileges**, and note the full names.
 
 2. **Upload the app**
    - cPanel → **File Manager**
@@ -169,8 +186,8 @@ or use the SSH route in section 4B.
    - Copy `.env.example` to `.env`
    - Edit it using the values below.
 
-5. **Run the first migration**
-   - If cPanel **Terminal** is available, run section 5.
+5. **Run the first migration and seed**
+   - If cPanel **Terminal** is available, run section 6.
    - If not, use the one-time Cron Job method in section 8.
 
 6. **Set permissions**
@@ -207,13 +224,14 @@ rm composer-setup.php
 export PATH="$HOME/bin:$PATH"
 ```
 
-Then run the deploy commands in section 5.
+Then run the deploy commands in section 6.
 
 ---
 
 ## 5. Production `.env`
 
-Replace every placeholder:
+Replace every placeholder. Both database variants are complete; keep **one**
+`DB_*` block.
 
 ```dotenv
 APP_NAME="Sip & Smoke"
@@ -221,6 +239,7 @@ APP_ENV=production
 APP_KEY=
 APP_DEBUG=false
 APP_URL=https://yourdomain.com
+ASSET_URL=https://yourdomain.com
 
 APP_LOCALE=en
 APP_FALLBACK_LOCALE=en
@@ -228,12 +247,17 @@ APP_FALLBACK_LOCALE=en
 LOG_CHANNEL=stack
 LOG_LEVEL=error
 
-DB_CONNECTION=mysql
-DB_HOST=localhost
-DB_PORT=3306
-DB_DATABASE=USERNAME_sipandsmoke
-DB_USERNAME=USERNAME_sipandsmoke
-DB_PASSWORD=THE_STRONG_PASSWORD
+# --- SQLite (default and current production) ---
+DB_CONNECTION=sqlite
+DB_DATABASE=/home/USERNAME/sipandsmoke/database/database.sqlite
+
+# --- MySQL alternative: comment out the two SQLite lines above ---
+# DB_CONNECTION=mysql
+# DB_HOST=localhost
+# DB_PORT=3306
+# DB_DATABASE=USERNAME_sipandsmoke
+# DB_USERNAME=USERNAME_sipandsmoke
+# DB_PASSWORD=THE_STRONG_PASSWORD
 
 SESSION_DRIVER=database
 SESSION_LIFETIME=120
@@ -241,12 +265,30 @@ SESSION_ENCRYPT=true
 SESSION_SECURE_COOKIE=true
 
 CACHE_STORE=database
-QUEUE_CONNECTION=sync
+QUEUE_CONNECTION=database
 
 ADMIN_NAME="Sip & Smoke Admin"
 ADMIN_EMAIL=admin@yourdomain.com
 ADMIN_PASSWORD="a-long-unique-password"
 ```
+
+If the site is served from a subdirectory, put the full path in both URL values
+and set the session cookie path. For example, the awais.cc deployment uses:
+
+```dotenv
+APP_URL=https://awais.cc/sipandsmoke
+ASSET_URL=https://awais.cc/sipandsmoke
+SESSION_PATH=/sipandsmoke
+```
+
+The app derives the Livewire script and update-route prefix from the path in
+`APP_URL`, so `/sipandsmoke/livewire/update` works without a separate Livewire
+configuration file. A domain-root install can omit `ASSET_URL` and
+`SESSION_PATH`.
+
+SQLite does not need `DB_HOST`, `DB_USERNAME` or `DB_PASSWORD`. Use an
+**absolute** `DB_DATABASE` path so PHP-FPM resolves it correctly. MySQL users
+should remove/comment the SQLite lines and use the MySQL block.
 
 Generate the application key **once**:
 
@@ -261,15 +303,69 @@ on later deployments.
 
 ## 6. First-deploy commands
 
-Run from `/home/USERNAME/sipandsmoke`:
+Run from `/home/USERNAME/sipandsmoke`. For SQLite, create the file and set
+permissions first; for MySQL, skip the `touch` and use the MySQL `.env` block.
 
 ```bash
 php artisan config:clear
-php artisan migrate --force --seed
-php artisan optimize
 
+# SQLite only:
+touch database/database.sqlite
+chmod 775 database
+chmod 664 database/database.sqlite
+
+php artisan migrate --force
+php artisan db:seed --force
+
+php artisan optimize
 chmod -R 775 storage bootstrap/cache public/uploads
 ```
+
+The one-line equivalent for a first install is:
+
+```bash
+php artisan migrate --force --seed
+```
+
+### 6.1 Seeding (first install and re-seeding)
+
+The seeders create the first admin, all editable site defaults, the 9 menu
+pages, 89 gallery photographs and 11 juice-bar items.
+
+```bash
+# Run every seeder (normal first deploy):
+php artisan db:seed --force
+
+# Or run only one module:
+php artisan db:seed --class=Database\\Seeders\\AdminUserSeeder --force
+php artisan db:seed --class=Database\\Seeders\\SiteContentSeeder --force
+php artisan db:seed --class=Database\\Seeders\\MenuPageSeeder --force
+php artisan db:seed --class=Database\\Seeders\\GalleryPhotoSeeder --force
+php artisan db:seed --class=Database\\Seeders\\ProductSeeder --force
+```
+
+Seeding rules:
+
+- `AdminUserSeeder` uses `firstOrCreate`. Changing `ADMIN_PASSWORD` later does
+  **not** change an existing admin password; use **Admin → Account** or reset it
+  from the terminal.
+- `SiteContentSeeder` uses `firstOrCreate` per setting and does not overwrite
+  copy edited in the admin.
+- The menu, gallery and product seeders skip their module completely when that
+  table already has rows. Re-running them does not duplicate records.
+- Seeding is for a first install or a deliberate recovery. Routine deployments
+  only need `php artisan migrate --force`.
+- Never run `php artisan migrate:fresh` against production: it deletes all
+  content, uploads records and the admin account.
+
+Verify the seeded state:
+
+```bash
+php artisan tinker --execute="echo 'users='.App\\Models\\User::count().' menus='.App\\Models\\MenuPage::count().' gallery='.App\\Models\\GalleryPhoto::count().' products='.App\\Models\\Product::count().' settings='.App\\Models\\Setting::count();"
+```
+
+For this project's awais.cc deployment, SQLite and the seeders are already in
+place. Do not seed it again unless you are intentionally rebuilding content.
 
 Then:
 
@@ -308,9 +404,10 @@ chmod -R 775 storage bootstrap/cache public/uploads
 php artisan up
 ```
 
-Do not run `--seed` again on a live database unless you intentionally want the
-seed data recreated. The seeders use `firstOrCreate`, but it is unnecessary on
-routine deployments.
+Do not run `--seed` on a routine deployment. It is only for a first install or a
+deliberate reset/recovery. Existing content is not overwritten by the seeders,
+but seeding is unnecessary and can create confusion when the site already has
+edited content.
 
 ---
 
@@ -322,8 +419,12 @@ Use this only if cPanel has no Terminal or SSH.
 2. Add a one-time job (minute/hour just ahead of the current server time):
 
 ```bash
-/usr/local/bin/php /home/USERNAME/sipandsmoke/artisan migrate --force --seed >> /home/USERNAME/sipandsmoke/storage/logs/deploy.log 2>&1
+/usr/local/bin/php /home/USERNAME/sipandsmoke/artisan migrate --force >> /home/USERNAME/sipandsmoke/storage/logs/deploy.log 2>&1
+/usr/local/bin/php /home/USERNAME/sipandsmoke/artisan db:seed --force >> /home/USERNAME/sipandsmoke/storage/logs/deploy.log 2>&1
 ```
+
+For SQLite, create `database/database.sqlite` and make `database/` writable
+before running the cron command.
 
 3. Wait for it to run, then check
    `/home/USERNAME/sipandsmoke/storage/logs/deploy.log`.
@@ -393,10 +494,27 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 5. Only `public/` should be web-accessible. `app/`, `config/`, `database/`,
    `storage/` and `vendor/` must not be reachable by URL.
 6. Back up:
-   - the MySQL database
+   - SQLite: `database/database.sqlite` via `sqlite3 ... ".backup"` (or PHP
+     `VACUUM INTO`), or MySQL: a `mysqldump`
    - `.env` / `APP_KEY`
    - `public/uploads/`
    - the last known-good application folder
+
+SQLite backup examples:
+
+```bash
+# Preferred when sqlite3 is installed:
+sqlite3 database/database.sqlite ".backup '/home/USERNAME/backups/sipandsmoke.sqlite'"
+
+# PHP fallback:
+php -r "\$pdo = new PDO('sqlite:database/database.sqlite'); \$pdo->exec(\"VACUUM INTO '/home/USERNAME/backups/sipandsmoke.sqlite'\");"
+```
+
+MySQL backup:
+
+```bash
+mysqldump -u USERNAME_sipandsmoke -p USERNAME_sipandsmoke > sipandsmoke.sql
+```
 
 Recommended permissions:
 
@@ -406,6 +524,10 @@ find /home/USERNAME/sipandsmoke -type f -exec chmod 644 {} \;
 chmod -R 775 /home/USERNAME/sipandsmoke/storage
 chmod -R 775 /home/USERNAME/sipandsmoke/bootstrap/cache
 chmod -R 775 /home/USERNAME/sipandsmoke/public/uploads
+
+# SQLite only: PHP must be able to write the file and its journal.
+chmod 775 /home/USERNAME/sipandsmoke/database
+chmod 664 /home/USERNAME/sipandsmoke/database/database.sqlite
 ```
 
 ---
@@ -437,7 +559,8 @@ Use the same reset command, then keep the new `APP_KEY` backed up.
 | --- | --- | --- |
 | 500 error after upload | `.env` missing or `APP_KEY` blank | Create `.env`, run `php artisan key:generate --force` |
 | “No application encryption key” | `APP_KEY` empty | Generate and save the key |
-| Database connection error | Wrong DB name/user/password or MySQL not selected | Recheck cPanel MySQL values and `DB_*` in `.env` |
+| Database connection error | Wrong DB name/user/password or wrong `DB_CONNECTION` | Recheck `DB_*` in `.env`; use SQLite **or** MySQL consistently |
+| SQLite “unable to open database file” | `database/` not writable, or relative `DB_DATABASE` resolved from the wrong directory | Use the absolute path and make `database/` + the `.sqlite` file writable by PHP-FPM |
 | 2FA QR does not appear | First sign-in not reached, session issue, or missing `APP_KEY` | Clear caches, confirm `SESSION_DRIVER=database`, check `storage/logs/laravel.log` |
 | Code always rejected | Server clock is wrong | Sync the server clock or ask Bluehost support; TOTP is time-based |
 | Admin locked out | Authenticator device lost | Reset 2FA with the tinker command in section 11 |
@@ -460,15 +583,16 @@ tail -n 100 storage/logs/laravel.log
 
 ## 13. Go-live checklist
 
-- [ ] PHP 8.2/8.3 selected
-- [ ] GD with WebP, PDO MySQL and required extensions enabled
-- [ ] MySQL database and user created
+- [ ] PHP 8.2+ selected (8.4 in production)
+- [ ] GD with WebP and required extensions enabled
+- [ ] Database chosen: SQLite file writable **or** MySQL database/user created
+- [ ] `DB_CONNECTION` and `DB_DATABASE` match the chosen database
 - [ ] Application uploaded to `/home/USERNAME/sipandsmoke`
 - [ ] Document root set to `/home/USERNAME/sipandsmoke/public`
 - [ ] `.env` created with production values
 - [ ] `APP_KEY` generated once and backed up
 - [ ] `APP_DEBUG=false`
-- [ ] `php artisan migrate --force --seed` completed
+- [ ] `php artisan migrate --force` and `php artisan db:seed --force` completed (first install only)
 - [ ] `storage`, `bootstrap/cache`, `public/uploads` writable
 - [ ] HTTPS active and forced
 - [ ] Public site loads

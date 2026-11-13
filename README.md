@@ -33,7 +33,7 @@ and interactions are preserved; the content is now database-driven.
 - PHP 8.2+ with `gd` (WebP support), `pdo_sqlite` or `pdo_mysql`, `mbstring`,
   `xml`, `curl` and `zip`.
 - Composer 2.
-- SQLite locally, or MySQL/MariaDB in production.
+- SQLite or MySQL/MariaDB. Both are supported; the current production deployment uses SQLite.
 
 ## Local setup
 
@@ -127,12 +127,21 @@ The original standalone `code.html`, `gallery.html` and `menu.html` are retained
 at the project root as design reference only. Laravel serves the Blade versions
 and does not route those files.
 
+## Live deployment
+
+The current production site is **https://awais.cc/sipandsmoke** with the admin at
+**https://awais.cc/sipandsmoke/admin/login**. It uses SQLite at
+`database/database.sqlite` and is already migrated and seeded. The app supports
+being served from a subdirectory: set `APP_URL`/`ASSET_URL` to the public URL and
+Livewire routes are prefixed automatically from the URL path.
+
 ## Production notes
 
-1. Set `APP_ENV=production`, `APP_DEBUG=false`, the real `APP_URL` and database
-   credentials in `.env`.
+1. Set `APP_ENV=production`, `APP_DEBUG=false`, the real `APP_URL` and the
+   database settings in `.env` (absolute SQLite path, or MySQL credentials).
 2. Point the web server document root at `public/` (not the project root).
-3. Make `storage/` and `bootstrap/cache/` writable by the web user.
+3. Make `storage/`, `bootstrap/cache/` and (for SQLite) `database/` writable by
+   the web user.
 4. Run `php artisan migrate --force` and seed once with
    `php artisan db:seed --force`.
 5. Cache configuration/routes/views if desired:
@@ -143,5 +152,6 @@ and does not route those files.
 For a first deploy, seed before exposing the admin account. The seeded demo
 content can be replaced entirely from `/admin/content`.
 
-For a step-by-step Bluehost deployment, including cPanel, MySQL, no-SSH and
-document-root options, see [`BLUEHOST_DEPLOYMENT.md`](BLUEHOST_DEPLOYMENT.md).
+For a step-by-step Bluehost deployment, including cPanel, SQLite and MySQL,
+seeding, no-SSH and document-root options, see
+[`BLUEHOST_DEPLOYMENT.md`](BLUEHOST_DEPLOYMENT.md).
